@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Dream Destinations</title>
+        <link rel="stylesheet" href="./travel_recommendations.css" />
+        <script defer src="./travel_recommendations.js"></script>
+    </head>
+
+    <body>
+        
+        <!-- Navigation Bar -->
+        <nav>
+            <div>
+                <img src="./images/airplane-icon.png" alt="airplane icon" />
+                <h2>Dream Destinations</h2>
+            </div>
+
+            <ul>
+                <li><a href="./travel_recommendations.html" id="home">Home</a></li>
+                <li><a href="./travel_recommendations_about.html" id="about">About Us</a></li>
+                <li><a href="./travel_recommendations_contact.html" id="contact">Contact Us</a></li>
+            </ul>
+
+            <div id="searchBox">
+                <input type="text" id="destinationInput" placeholder="Enter a destination or keyword">
+                <!-- <img src="./images/search-icon.png" alt=""> -->
+                <button id='btnSearch'>Search</button>
+                <button id='btnClear'>Clear</button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- Social Media -->
+            <section class="socialMedia">
+                <hr style="width: 1px; height: 250px; display: inline-block;">
+                <img src="./images/twitter-bird-icon.png" id="twitterIcon" alt="twitter bird icon" />
+                <img src="./images/facebook-icon.png" id="facebookIcon" alt="facebook icon" />
+                <img src="./images/telegram-icon.png" id="telegramIcon" alt="telegram icon" />
+                <img src="./images/youtube-icon.png" id="youtubeIcon" alt="youtube icon" />
+            </section>
+
+            <!-- Intro Title and Desc -->
+            <section id="mainSectionIntroTitleAndDesc">
+                <h3 id=mainSectionTitle>Welcome! We are here to help you find your next Dream Destination!</h3>
+                <h4>Explore diverse cultures and landscapes that
+                    captivate your heart and ignite a sense of wonder!</h4> 
+                <h4>Enter 'countries', 'beaches' or even 'temples' in the search box and we will provide suggestions for you! 
+                     When you are ready, click the 'Book Now' button to book your stay. </h4>
+                <h4>Enjoy and happy travels!</h4>
+                <button id='btnBookNow'>BOOK NOW</button>
+            </section>
+
+            <!-- Results of destination search are displayed here -->
+            <section id="destinationSearchResults">         
+            </section>
+
+        </main>
+        
+    </body>
+
+</html>
