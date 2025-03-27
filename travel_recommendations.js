@@ -297,13 +297,4 @@ function clearPositionDescription () {
   if (positionDescriptionDiv === null) { return; }
   positionDescriptionDiv.innerHTML = "";
   positionDescriptionDiv.style.display = "none";
-} 
-
-//------------------------------------------
-// TO DO
-// ALSO ADD MEDIA QUERIES TO HANDLE DIFFERENT SCREEN SIZES
-// LOCAL TIME on top of search results:
-//   const options = { timeZone: 'America/New_York', hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
-//   const newYorkTime = new Date().toLocaleTimeString('en-US', options);
-//   console.log("Current time in New York:", newYorkTime);
-// ------------------------------------------
+}
