@@ -6,37 +6,43 @@ body {
     background-attachment:fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    box-sizing: border-box;
+}
+
+/* Set box-sizing for all elements */
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 nav {
     display: flex;
     flex-direction: row;
-    background-color: lightseagreen;   
-    padding: 3px;
-    align-items: center;
     justify-content: space-between;
+    background-color: lightseagreen;   
+    padding: 5px; 
+    align-items: center;
     position: sticky;
     top: 0px;
     z-index: 1;
     overflow: hidden;
+    width: 100%;
 }
 
-nav div {
+nav #logo {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 10px; 
+    justify-content: left;
 }
 
 nav #searchBox {
     display: inline;
-    width: 400px; 
-    height: 35px;
-    align-content: center;
     align-items: center;
+    align-content: center;
+    width: 400px;
+    height: 45px;
+    justify-content: center;
     padding: 8px;
-    border-radius: 30px;  
+    border-radius: 30px; 
 } 
 
 nav #destinationInput {
@@ -62,7 +68,7 @@ nav #destinationInput:focus {
 }
 
 nav #btnSearch {
-    width: 70px;
+    width: auto;
     height: 30px;
     border-radius: 10px;
     font-size: 15px;
@@ -73,7 +79,7 @@ nav #btnSearch {
 }
 
 nav #btnClear {
-    width: 60px;
+    width: auto;
     height: 30px;
     border-radius: 10px;
     font-size: 15px;
@@ -95,6 +101,7 @@ nav #btnClear {
 
 nav img {
     margin-left: 10px;
+    margin-top: 10px;
     width: 40px;
     height: 40px;
     padding-right: 10px;
@@ -109,8 +116,8 @@ nav h2 {
 nav ul {    
     list-style-type: none;
     padding-right: 10px;
-} 
-  
+}
+
 nav ul li {
     display: inline;
     margin-right: 10px;
@@ -120,7 +127,7 @@ nav ul li:hover {
     text-shadow: 0 0 10px darkblue;
 }
 
- nav a {
+nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -128,20 +135,21 @@ nav ul li:hover {
 
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    padding: 10px;
+    width: 100%;
 }
 
 #mainSectionIntroTitleAndDesc {
-    width: 40%;
-    height: 40%;
-    justify-content: left;
+    width: 90%;
+    justify-content: center;
     padding: 20px;
     background-color: lightcyan;
     opacity: 90%;
     margin-top: 20px;
-    margin-left: 20px;
     border-radius: 20px;
+    text-align: center;
 }
 
 #mainSectionTitle {
@@ -190,23 +198,25 @@ main {
 }
 
 .socialMedia img {
-    width: 30px;
-    height:30px;
+    min-width: 30px;
+    max-width: 50px;
+    min-height: 30px;
+    max-height: 50px;
     padding: 10px;
 }
 
 /* Contact Form */
 #mainSectionContactInfo {
     display: flex;
-    flex-direction: row;
-    width: 800px;
-    height: 500px;
-    margin-left: 100px;
-    margin-top: 100px;
+    flex-direction: column;
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
     align-items: center;
     background-color: lightcyan;
     opacity: 95%;
     border-radius: 20px;
+    padding: 15px;
 }
 
 #mainSectionContactInfo h2, p {
@@ -227,11 +237,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;    
-    width: 500px;
-    height: 430px;
+    width: 90%;
+    max-width: 500px;
     margin: 20px auto;
     background-color: lightblue;
     border-radius: 20px;
+    padding: 15px;
 }
 
 #contactForm div {
@@ -245,7 +256,9 @@ main {
 }
 
 #contactForm #name, #email, #message {
-    width: 470px;
+    width: 450px;
+    max-width: 450px;
+    min-width: 300px;
     height: 30px;
     margin: 5px;
     border-radius: 10px;
@@ -270,7 +283,7 @@ main {
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    margin-top: 8px;
+    margin-top: 5px;
 }
 
 #contactForm button:hover {
@@ -305,7 +318,8 @@ main {
 
 #teamPersonnel {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 }
 
 #teamPersonnel div {
@@ -360,12 +374,11 @@ main {
     text-align: center;
     background-color: lightcyan;
     overflow-y: scroll;
-    scrollbar-color: skyblue lightcyan ;
+    scrollbar-color: skyblue lightcyan;
     scrollbar-width: thin;
-    margin-top: 20px;
-    margin-left: 70px;
-    margin-right: 10px;
-    width: 400px; 
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
     height: auto;
     max-height: 670px;
     border-radius: 10px;
@@ -385,20 +398,23 @@ main {
 /* Search Results destination cards */
 .destination {
     background-color:lightblue;
-    width: 365px;
-    height: 300px;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    width: 90%;
+    max-width: 365px;
+    height: auto;
+    margin: 10px auto;
+    padding-bottom: 10px;
     opacity: 80%;
     border-radius: 10px;
     align-self: center;
 }
 
 .destination img {
-    width: 365px;
-    height: 200px;
-    border-radius: 10px;
+    width: 100%;
+    max-width: 365px;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
     margin: 0px;
     padding: 0px;
 }
@@ -438,4 +454,117 @@ main {
 .destination button:hover {
     color: darkblue;
     background-color: lightcyan;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    #contactForm #name, #email, #message {
+        width: 300px;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 992px){
+    #contactForm #name, #email, #message {
+        width: 400px;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav #logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;        
+    }
+    nav #searchBox {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    nav #destinationInput, #btnSearch {
+        margin-right: 5px;
+    }
+
+    .socialMedia {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 992px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 50px;
+    }
+    
+    nav div {
+        justify-content: space-between;
+        padding-right: 10px;
+    }
+    
+    nav #searchBox {
+        display: inline;
+        flex-direction: row;
+        width: 400px;
+    }
+    
+    nav #destinationInput {
+        margin-bottom: 0;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        padding-right: 10px;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin-right: 10px;
+    }
+
+    main {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    #mainSectionIntroTitleAndDesc {
+        width: 40%;
+        text-align: left;
+        margin-left: 20px;
+    }
+    
+    #mainSectionContactInfo {
+        flex-direction: row;
+        margin-left: 100px;
+        height: 500px;
+    }
+    
+    #teamPersonnel {
+        flex-direction: row;
+    }
+    
+    #destinationSearchResults {
+        margin-left: 70px;
+        margin-right: 10px;
+    }
+
+    #contactForm #name, #email, #message {
+        width: 450px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #mainSectionIntroTitleAndDesc {
+        width: 40%;
+        height: 40%;
+    }
+    
+    #contactForm {
+        height: 430px;
+    }
 }
