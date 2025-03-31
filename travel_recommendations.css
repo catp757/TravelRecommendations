@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;    
-    background-image:url('/images/mountains_lake.jpg');
+    background-image:url('./images/mountains_lake.jpg');
     background-attachment:fixed;
     background-repeat: no-repeat;
     background-size: cover;

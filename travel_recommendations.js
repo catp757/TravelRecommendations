@@ -90,7 +90,7 @@
                 destinationDiv.classList.add('destination');
 
                 const image = document.createElement('img');
-                image.setAttribute('src', `/images/${destination.imageUrl}`);
+                image.setAttribute('src', `./images/${destination.imageUrl}`);
                 image.setAttribute('alt', `Picture of ${destination.name}`);
 
                 const name = document.createElement('h4');
